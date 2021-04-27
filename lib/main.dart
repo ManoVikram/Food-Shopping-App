@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screens/homeScreen.dart';
+
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
@@ -11,7 +13,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: "Food Shopping",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xFFF2F7FD),
+      ),
       home: FoodShopping(),
     );
   }
@@ -20,7 +24,9 @@ class _MyAppState extends State<MyApp> {
 class FoodShopping extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: HomeScreen(),
+    );
   }
 }
 
