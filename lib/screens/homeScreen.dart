@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:foods_shopping_app/screens/detailsScreen.dart';
 
 import '../widgets/categoriesList.dart';
 import '../widgets/foodCard.dart';
@@ -17,7 +18,7 @@ class HomeScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 8.0,
-              vertical: 8.0,
+              vertical: 20.0,
             ),
             child: Column(
               children: [
@@ -63,7 +64,13 @@ class HomeScreen extends StatelessWidget {
                       name: "Pink Macaroon",
                       description: "Fruits of a multitude plant species",
                       price: 5.25,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => DetailsScreen(),
+                          ),
+                        );
+                      },
                     ),
                     FoodCard(
                       size: size,
@@ -92,9 +99,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
